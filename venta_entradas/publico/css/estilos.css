@@ -12,6 +12,12 @@ body{
     border: 20px solid #ffff00;
 }
 
+h1{
+    color: #ffff00;
+    font-weight: bold;
+    font-size: 45px;
+}
+
 #centrado{
     text-align: center;
     margin-top: 30px;
@@ -40,6 +46,8 @@ table{
 
 #titulo{
     text-align: center;
+    color: #ffff00;
+    font-size: 20px;
 }
 
 .comprador{
@@ -144,6 +152,8 @@ table{
 
 #datos{
     text-align: center;
+    color: #ffff00;
+    margin-top: 15px;
 }
 
 .monto{
