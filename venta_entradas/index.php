@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venta de Entradas</title>
     <link rel="stylesheet" href="publico/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
-        <h1 id="centrado">Ventas de Entradas</h1>
+        <h1 id="centrado"><i class="fa-solid fa-cash-register"></i> Ventas de Entradas</h1>
         <img src="publico/img/circo.jpg" alt="circo">
     </header>
 
@@ -80,7 +81,7 @@
             <table id="formulario">
                 <h4 id="titulo">Formulario de Compra</h4>
                 <tr>
-                    <td width="200">Comprador</td>
+                    <td width="200"><i class="fa-regular fa-user"></i> Comprador</td>
                     <td>
                         <input class="comprador" type="text" name="txtComprador">
                     </td>
@@ -88,14 +89,14 @@
                 </tr>
 
                 <tr>
-                    <td>Fecha Actual</td>
+                    <td><i class="fa-regular fa-calendar-days"></i> Fecha Actual</td>
                     <td>
                         <input class="fecha" type="text" name="txtFecha" readonly value="<?php echo date('d/m/Y'); ?>">
                     </td>
                 </tr>
                 
                 <tr>
-                    <td>Nro de Entradas Adultos</td>
+                    <td><i class="fa-solid fa-children"></i> Nro de Entradas Adultos</td>
                     <td>
                         <input class="adultos" type="text" name="txtNroEntradasAdultos" size="50">
                     </td>
@@ -103,7 +104,7 @@
                 </tr>
 
                 <tr>
-                    <td>Nro de Entradas Niños</td>
+                    <td><i class="fa-solid fa-child-reaching"></i> Nro de Entradas Niños</td>
                     <td>
                         <input class="ninios" type="text" name="txtNroEntradasNinios" size="50">
                     </td>
@@ -150,8 +151,8 @@
                                 <td><?php echo $dia; ?></td>
                             </tr>
                             <tr>
-                                <td>Monto Total a Pagar</td>
-                                <td><?php echo "$". number_format($adultos + $ninios, 2, '.', ','); ?></td>
+                                <td class="monto">Monto a Pagar</td>
+                                <td class="monto"><?php echo "$". number_format($adultos + $ninios, 2, '.', ','); ?></td>
                             </tr>
                         </table>
                     </td>
