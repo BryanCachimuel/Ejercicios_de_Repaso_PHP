@@ -6,6 +6,12 @@
     font-size: 15px;
 }
 
+body{
+    border: 20px solid #00b3ffcd;
+    height: 100vh;
+    border-radius: 10px;
+}
+
 section{
     margin-top: 30px;
 }
@@ -22,6 +28,10 @@ table{
 
 #formulario_titulo{
     text-align: center;
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #0062ff;
+    font-weight: bold;
 }
 
 .comprador{
