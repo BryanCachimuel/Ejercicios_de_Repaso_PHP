@@ -1,15 +1,20 @@
 *{
-    background-color: rgba(255, 166, 0, 0.888);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #00c8ffe2;
 }
 
 
 body{
     font-family: Tahoma;
     font-size: 14px;
+    border: 20px solid #ffff00;
 }
 
 #centrado{
     text-align: center;
+    margin-top: 30px;
 }
 
 img{
@@ -142,4 +147,5 @@ table{
 
 #footer{
     text-align: center;
+    margin-bottom: 30px;
 }
