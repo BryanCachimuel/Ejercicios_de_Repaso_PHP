@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entradas para el estadio</title>
     <link rel="stylesheet" href="publico/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -76,10 +77,10 @@
 
         <form action="index.php" method="POST" autocomplete="off">
             <table id="formulario">
-                <h4 id="formulario_titulo">Formulario de Compra de Entradas</h4>
+                <h4 id="formulario_titulo"><i class="fa-solid fa-ticket"></i> Formulario de Compra de Entradas</h4>
 
                 <tr>
-                    <td width="200">Comprador</td>
+                    <td width="200"><i class="fa-regular fa-user"></i> Comprador</td>
                     <td>
                         <input type="text" name="txtComprador" class="comprador">
                     </td>
@@ -87,14 +88,14 @@
                 </tr>
 
                 <tr>
-                    <td>Fecha Actual</td>
+                    <td><i class="fa-regular fa-calendar-days"></i> Fecha Actual</td>
                     <td>
                         <input type="text" name="txtFecha" class="fecha" readonly value="<?php echo date('d/m/y'); ?>">
                     </td>
                 </tr>
 
                 <tr>
-                    <td>Nro de Entradas para Adultos</td>
+                    <td><i class="fa-solid fa-children"></i> Nro de Entradas para Adultos</td>
                     <td>
                         <input type="text" name="txtEntradasAdultos" class="adultos">
                     </td>
@@ -102,7 +103,7 @@
                 </tr>
 
                 <tr>
-                    <td>Nro de Entradas para Niños</td>
+                    <td><i class="fa-solid fa-child-reaching"></i> Nro de Entradas para Niños</td>
                     <td>
                         <input type="text" name="txtEntradasNinios" class="ninios">
                     </td>
