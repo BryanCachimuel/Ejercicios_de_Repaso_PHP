@@ -136,3 +136,22 @@ function delete_item($id){
     // no hubo un match o resultados
     return false;
 }
+
+function add_item($item){
+    $items = get_items();
+
+    /* Si existe el id ya en nuestros items podemos
+       actualizar la información en lugar de agregarlo 
+    */ 
+    if(get_item($item['id']) !== false){
+        foreach($items as $i => $e_item){
+            if($item['id'] === $e_item['id']){
+                $_SESSION['new_quote']['items'][$i] = $item;
+                return true;
+            }
+        }
+    }
+    // No existe en la lista, se agrega al array
+    $_SESSION['new_quote']['items'][] = $item;
+    return true;
+}
