@@ -78,3 +78,16 @@ function restart_quote(){
 
     return true;
 }
+
+function get_items(){
+    $items = [];
+    
+    // si no existe la cotización y obviamente está vacio el array
+    if(!isset($_SESSION['new_quote']['items'])){
+        return $items;
+    }
+
+    // la cotización existe, se asigna el valor
+    $items = $_SESSION['new_quote']['items'];
+    return $items;
+}
