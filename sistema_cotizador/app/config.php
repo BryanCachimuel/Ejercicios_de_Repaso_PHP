@@ -25,5 +25,10 @@ define('CSS', URL . 'assets/css/');
 define('IMG', URL . 'assets/img/');
 define('JS', URL . 'assets/js/');
 
+/* Para personalización */
+define('APP_NAME', 'Sistema Cotizador');
+define('TAXES_RATE', 16);
+define('SHIPPING', 99.50);
+
 /* Cargar todas las funciones */
 require_once APP.'functions.php';
