@@ -110,3 +110,29 @@ function get_item($id){
     // no hubo un match o resultados
     return false;
 }
+
+function delete_items(){
+    $_SESSION['new_quote']['items'] = [];
+    recalculate_quote();
+    return true;
+}
+
+function delete_item($id){
+    $items = get_items();
+
+    // si no hay items
+    if(empty($items)){
+        return false;
+    }
+
+    // si hay items iteramos
+    foreach($items as $i => $item){
+        // validar si existe con el mismo id pasado
+        if($item['id'] === $id){
+            unset($_SESSION['new_quote']['items'][$i]);
+            return true;
+        }
+    }
+    // no hubo un match o resultados
+    return false;
+}
