@@ -61,3 +61,20 @@ function recalculate_quote(){
 
     return true;
 }
+
+/* función para reasignar valores */
+function restart_quote(){
+    $_SESSION['new_quote'] = [
+        'number' => rand(111111, 999999),
+        'name' => '',
+        'company' => '',
+        'email' => '',
+        'items' => [],
+        'subtotal' => 0,
+        'taxes' => 0,
+        'shipping' => 0,
+        'total' => 0
+    ];
+
+    return true;
+}
