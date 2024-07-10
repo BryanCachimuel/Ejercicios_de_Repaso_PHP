@@ -91,3 +91,22 @@ function get_items(){
     $items = $_SESSION['new_quote']['items'];
     return $items;
 }
+
+function get_item($id){
+    $items = get_items();
+
+    // si no hay items
+    if(empty($items)){
+        return false;
+    }
+
+    // si hay items iteramos
+    foreach($items as $item){
+        // validar si existe con el mismo id pasado
+        if($item['id'] === $id){
+            return $item;
+        }
+    }
+    // no hubo un match o resultados
+    return false;
+}
