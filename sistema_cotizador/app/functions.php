@@ -200,3 +200,15 @@ function json_build($status = 200, $data = null, $msg = ''){
 
     return json_encode($json);
 }
+
+function json_output($json){
+    header('Access-Control-Allow-Origin: *');
+    header('Content-type: application/json;charset=utf-8');
+
+    if(is_array($json)){
+        $json = json_encode($json);
+    }
+
+    echo $json;
+    return true;
+}
