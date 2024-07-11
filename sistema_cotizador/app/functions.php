@@ -212,3 +212,7 @@ function json_output($json){
     echo $json;
     return true;
 }
+
+function hook_mi_funcion(){
+    echo "Estoy siendo ejecutada en ajax.php de forma autorizada";
+}
