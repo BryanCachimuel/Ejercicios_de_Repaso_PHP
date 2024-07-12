@@ -72,7 +72,7 @@
             <div class="col-lg-4 col-12">
                <div class="card">
                 <div class="card-header">Resumen de Cotización</div>
-                <div class="card-body">
+                <div class="card-body wrapper_quote">
                     <div class="table-responsive">
                         <table class="table table-hover table-striped table-bordered">
                             <thead>
