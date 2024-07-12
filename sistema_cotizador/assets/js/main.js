@@ -16,7 +16,7 @@ $("document").ready(() => {
     })
       .done((res) => {
         if(res.status === 200){
-
+            wrapper.html(res.data.html);
         }else{
             wrapper.html(res.msg);
         }
