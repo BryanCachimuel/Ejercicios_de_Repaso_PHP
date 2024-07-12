@@ -216,3 +216,9 @@ function json_output($json){
 function hook_mi_funcion(){
     echo "Estoy siendo ejecutada en ajax.php de forma autorizada";
 }
+
+function hook_get_quote_res(){
+    /* cargar la cotización */
+    $quote = get_quote();
+    json_output(json_build(200, null, 'Estoy cargabdo bien'));
+}
