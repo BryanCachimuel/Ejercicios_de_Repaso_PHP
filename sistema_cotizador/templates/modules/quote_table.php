@@ -9,44 +9,41 @@
         <thead>
             <tr>
                 <th>Concepto</th>
-                <th>Cantidad</th>
-                <th class="text-center">Precio</th>
+                <th> class="text-center">Precio</th>
+                <th class="tgext-center">Cantidad</th>
                 <th class="text-center">Subtotal</th>
             </tr>
         </thead>
         <tbody>
+            <?php foreach($d->items as $item): ?>
             <tr>
-                <td>Guitarra eléctrica</td>
-                <td class="text-center">1</td>
-                <td class="text-center">$325.00</td>
-                <td class="text-center">$399.00</td>
-            </tr>
-            <tr>
-                <td>Ukulele</td>
-                <td class="text-center">2</td>
-                <td class="text-center">$299.00</ºtd>
-                <td class="text-center">$498.00</td>
+                <td><?php echo $item->concept; ?></td>
+                <td class="text-center"><?php echo $item->quanity; ?></td>
+                <td class="text-center"><?php echo '$'.number_format($item->price, 2); ?></td>
+                <td class="text-center"><?php echo '$'.number_format($item->total, 2); ?></td>
             </tr>
             <tr>
                 <td style="text-align: right;" colspan="3">Subtotal</td>
-                <td class="text-center">$123.00</td>
+                <td class="text-center"><?php echo '$'.number_format($item->subtotal, 2); ?></td>
             </tr>
             <tr>
                 <td style="text-align: right;" colspan="3">Impuestos</td>
-                <td class="text-center">$123.00</td>
+                <td class="text-center"><?php echo '$'.number_format($item->taxes),2; ?></td>
             </tr>
             <tr>
                 <td class="text-right" style="text-align: right;" colspan="3">Envio</td>
-                <td class="text-center">$50.00</td>
+                <td class="text-center"><?php echo '$'.number_format($item->shipping,2); ?></td>
             </tr>
             <tr>
                 <td style="text-align: right;" colspan="4">
                     <b>Total</b>
                     <h3 class="text-success">
-                        <b>$799.00</b>
+                        <b><?php echo '$'.number_format($d->total); ?></b>
                     </h3>
+                    <?php echo sprintf('Impuestos incluidos %s%% , TAXES_RATE')?>
                 </td>
             </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </div>
