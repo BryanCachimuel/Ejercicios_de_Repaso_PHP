@@ -36,7 +36,7 @@
                 <div class="card">
                     <div class="card-header">Agregar Nuevo Concepto</div>
                     <div class="card-body">
-                        <form action="">
+                        <form id="add_to_quote" method="post">
                             <div class="form-group row">
                                 <div class="col-3">
                                     <label for="concepto">Concepto</label>
