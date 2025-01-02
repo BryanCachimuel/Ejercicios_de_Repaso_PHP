@@ -4,7 +4,7 @@
 class db {
 
     public static function conexion(){
-        $conn = new mysqli("localhost","","","arquitectura_web") or die("Error en la conexión hacia la base de datos");
+        $conn = new mysqli("localhost","root","","arquitectura_web") or die("Error en la conexión hacia la base de datos");
         $conn->query("SET NAMES 'utf8'");   // control de caracteres especiales en la base de datos
         return $conn;
     }
